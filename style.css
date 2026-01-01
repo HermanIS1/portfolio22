@@ -1,0 +1,241 @@
+:root {
+    --green: #00ff66;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY + TŁO */
+body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #eaeaea;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.65)),
+        url("images/tlo.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* NOISE */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    padding: 100px;
+}
+
+.hero-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ZDJĘCIE + KRESKA */
+.photo-wrap {
+    border-left: 3px solid var(--green);
+    padding-left: 14px;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.2);
+}
+
+/* IMIĘ */
+.hero-title {
+    font-family: 'UnifrakturCook', serif;
+    font-size: 64px;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+}
+
+.hero-title .white {
+    color: #ffffff;
+}
+
+.hero-title .green {
+    color: var(--green);
+}
+
+/* HASŁO */
+.hero-claim {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #dcdcdc;
+    margin-bottom: 40px;
+}
+
+/* LINK */
+.scroll {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: var(--green);
+    text-decoration: none;
+}
+
+.scroll:hover {
+    text-shadow: 0 0 10px rgba(0,255,102,0.6);
+}
+
+/* SEKCJE */
+section {
+    max-width: 1100px;
+    margin: 0 auto 70px;
+}
+
+/* BOX */
+.section-box {
+    background: rgba(0,0,0,0.55);
+    padding: 45px 50px;
+    border-left: 3px solid var(--green);
+}
+
+/* NAGŁÓWKI */
+h3 {
+    font-family: 'UnifrakturCook', serif;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* PROJEKT */
+.project {
+    margin-bottom: 30px;
+}
+
+.project h4 {
+    font-size: 20px;
+}
+
+.project p {
+    margin: 12px 0;
+    color: #d6d6d6;
+}
+
+.project span {
+    font-size: 13px;
+    color: #9a9a9a;
+}
+
+/* LINKI */
+.links a,
+section a {
+    color: var(--green);
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.links a:hover,
+section a:hover {
+    text-shadow: 0 0 8px rgba(0,255,102,0.6);
+}
+@media (max-width: 768px) {
+
+    /* BODY */
+    body {
+        background-attachment: scroll;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 60px 20px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* ZDJĘCIE */
+    .photo-wrap {
+        border-left: none;
+        border-top: 3px solid var(--green);
+        padding-left: 0;
+        padding-top: 14px;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    /* IMIĘ */
+    .hero-title {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+
+    /* HASŁO */
+    .hero-claim {
+        font-size: 17px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    /* LINK */
+    .scroll {
+        font-size: 12px;
+    }
+
+    /* SEKCJE */
+    section {
+        margin-bottom: 40px;
+        padding: 0 15px;
+    }
+
+    .section-box {
+        padding: 30px 22px;
+    }
+
+    h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* PROJEKTY */
+    .project h4 {
+        font-size: 18px;
+    }
+
+    .project p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .project span {
+        display: block;
+        margin-top: 8px;
+    }
+
+    /* LINKI */
+    .links {
+        margin-top: 15px;
+    }
+
+    .links a {
+        display: inline-block;
+        margin-right: 12px;
+        font-size: 14px;
+    }
+}
