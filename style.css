@@ -239,3 +239,10 @@ section a:hover {
         font-size: 14px;
     }
 }
+a,
+a:hover,
+button,
+button:hover {
+    cursor: url("images/cursor.png") 24 24, pointer;
+}
+
