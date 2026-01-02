@@ -27,3 +27,6 @@ window.addEventListener("scroll", () => {
 
     lastScrollY = currentScrollY;
 });
+history.scrollRestoration = "manual";
+window.scrollTo(0, 0);
+    
