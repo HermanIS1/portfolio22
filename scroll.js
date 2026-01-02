@@ -1,10 +1,13 @@
-let lastScroll = window.scrollY;
+let lastScrollY = window.scrollY;
+let sigilTimeout = null;
+
 const sigil = document.getElementById("scroll-sigil");
 
 window.addEventListener("scroll", () => {
-    const current = window.scrollY;
+    const currentScrollY = window.scrollY;
 
-    if (current > lastScroll) {
+    // kierunek scrolla
+    if (currentScrollY > lastScrollY) {
         sigil.style.top = "auto";
         sigil.style.bottom = "30px";
     } else {
@@ -12,12 +15,15 @@ window.addEventListener("scroll", () => {
         sigil.style.top = "30px";
     }
 
+    // pokaż sigil NATYCHMIAST
     sigil.style.opacity = "1";
 
-    clearTimeout(window.sigilTimeout);
-    window.sigilTimeout = setTimeout(() => {
-        sigil.style.opacity = "0";
-    }, 300);
+    // reset timera – klucz do wolnego scrolla
+    if (sigilTimeout) clearTimeout(sigilTimeout);
 
-    lastScroll = current;
+    sigilTimeout = setTimeout(() => {
+        sigil.style.opacity = "0";
+    }, 600); // ← im większa wartość, tym lepiej przy wolnym scrollu
+
+    lastScrollY = currentScrollY;
 });
