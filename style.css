@@ -20,21 +20,30 @@ body {
     background-attachment: fixed;
     cursor: url("images/cursor.png") 16 16, auto;
 }
+
+/* ===== SCROLL BUTTON ===== */
+
 .scroll {
     display: inline-block;
-    font-size: 14px;
-    margin-top: 30px;
+    font-size: 22px;
+    margin-top: 26px;
     letter-spacing: 3px;
     color: var(--green);
     text-decoration: none;
-    transition: text-shadow 0.3s ease, transform 0.3s ease;
-    animation: arrowPulse 1.8s infinite ease-in-out;
+    padding: 10px 18px;
+    border: 1px solid rgba(0,255,102,0.6);
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .scroll:hover {
-    text-shadow: 0 0 12px rgba(0,255,102,0.9);
+    background: rgba(0,255,102,0.08);
+    box-shadow: 0 0 18px rgba(0,255,102,0.6);
     transform: translateY(-2px);
 }
+
+
+/* ===== CUSTOM CURSOR ===== */
 
 #cursor-trail {
     position: fixed;
@@ -48,6 +57,8 @@ body {
     z-index: 9999;
 }
 
+/* ===== REVEAL ON SCROLL ===== */
+
 .hidden {
     opacity: 0;
     transform: translateY(40px);
@@ -59,15 +70,14 @@ body {
     transform: translateY(0);
 }
 
-
 /* ===== HERO ===== */
 
 .hero {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 40px;
+    padding: 80px 40px 40px;
 }
 
 .hero-content {
@@ -177,50 +187,30 @@ body {
     max-width: 420px;
 }
 
-.scroll {
-    display: inline-block;
-    font-size: 14px;
-    margin-top: 30px;
-    letter-spacing: 3px;
-    color: var(--green);
-    text-decoration: none;
-}
-
 /* ===== SECTIONS ===== */
 
 .section-box {
+    position: relative;
     background: rgba(0,0,0,0.55);
     padding: 45px 50px;
     border-left: 3px solid var(--green);
-    margin: 100px auto 70px;
+    margin: 40px auto 50px;
     max-width: 1100px;
 }
-.section-box.intent::after {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    border: 2px solid rgba(0, 255, 102, 0.8);
-    box-shadow: 0 0 25px rgba(0, 255, 102, 0.6);
-    pointer-events: none;
-    opacity: 1;
-    animation: pulse 1.2s infinite alternate;
-}
 
-
-h3 {
-    font-family: 'UnifrakturCook', serif;
-    font-size: 28px;
-    margin-bottom: 30px;
-}
-
-.project {
-    margin-bottom: 30px;
+.section-box:hover {
+    box-shadow: 0 0 35px rgba(0,255,102,0.35);
+    transform: translateY(-3px);
+    transition: 0.3s ease;
 }
 
 .links a, section a {
     color: var(--green);
     text-decoration: none;
 }
+
+/* ===== SCROLL SIGIL ===== */
+
 #scroll-sigil {
     position: fixed;
     left: 50%;
@@ -236,26 +226,17 @@ h3 {
     z-index: 9999;
 }
 
-
-/* ===== ANIMATION ===== */
+/* ===== ANIMATIONS ===== */
 
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
-@keyframes pulse {
-    from {
-        box-shadow: 0 0 18px rgba(0, 255, 102, 0.4);
-    }
-    to {
-        box-shadow: 0 0 36px rgba(0, 255, 102, 0.85);
-    }
-}
+
 @keyframes arrowPulse {
     0%, 100% { opacity: 0.6; }
     50% { opacity: 1; }
 }
-
 
 /* ===== MOBILE ===== */
 
@@ -281,14 +262,14 @@ h3 {
         font-size: 18px;
     }
 
-    .cd-disc {
-        left: 50px;
-        width: 120px;
-        height: 120px;
+    .album {
+        width: 150px;
+        height: 150px;
     }
 
-    .album {
-        width: 140px;
-        height: 140px;
+    .cd-disc {
+        width: 150px;
+        height: 150px;
+        left: 60px;
     }
 }
