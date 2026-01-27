@@ -1,11 +1,11 @@
-const boxes = document.querySelectorAll(".section-box");
+const intentSections = document.querySelectorAll(".section-box");
 
-boxes.forEach(box => {
-    box.addEventListener("mouseenter", () => {
-        box.classList.add("intent");
+intentSections.forEach(section => {
+    section.addEventListener("mouseenter", () => {
+        section.classList.add("intent");
     });
 
-    box.addEventListener("mouseleave", () => {
-        box.classList.remove("intent");
+    section.addEventListener("mouseleave", () => {
+        section.classList.remove("intent");
     });
 });
