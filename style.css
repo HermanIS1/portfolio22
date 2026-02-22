@@ -43,9 +43,11 @@ body {
 }
 
 
-/* ===== CUSTOM CURSOR ===== */
-
 #cursor-trail {
+    width: 12px;
+    height: 12px;
+    background: red;
+    border-radius: 50%;
     position: absolute;
     pointer-events: none;
 }
@@ -266,4 +268,5 @@ body {
         left: 60px;
     }
 }
+
 
