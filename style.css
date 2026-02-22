@@ -46,10 +46,12 @@ body {
 #cursor-trail {
     width: 12px;
     height: 12px;
-    background: red;
+    background: #00ff66;
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
+    z-index: 9999;
+    box-shadow: 0 0 10px #00ff66;
 }
 
 /* ===== REVEAL ON SCROLL ===== */
@@ -268,5 +270,6 @@ body {
         left: 60px;
     }
 }
+
 
 
