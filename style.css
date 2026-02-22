@@ -46,15 +46,8 @@ body {
 /* ===== CUSTOM CURSOR ===== */
 
 #cursor-trail {
-    position: fixed;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
+    position: absolute;
     pointer-events: none;
-    background: rgba(0,255,102,0.7);
-    box-shadow: 0 0 18px rgba(0,255,102,0.9);
-    transform: translate(-50%, -50%);
-    z-index: 9999;
 }
 
 /* ===== REVEAL ON SCROLL ===== */
@@ -273,3 +266,4 @@ body {
         left: 60px;
     }
 }
+
