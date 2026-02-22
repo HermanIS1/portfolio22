@@ -21,7 +21,6 @@ body {
     cursor: url("images/cursor.png") 16 16, auto;
 }
 
-/* ===== SCROLL BUTTON ===== */
 
 .scroll {
     display: inline-block;
@@ -42,20 +41,6 @@ body {
     transform: translateY(-2px);
 }
 
-
-#cursor-trail {
-    width: 12px;
-    height: 12px;
-    background: #00ff66;
-    border-radius: 50%;
-    position: absolute;
-    pointer-events: none;
-    z-index: 9999;
-    box-shadow: 0 0 10px #00ff66;
-}
-
-/* ===== REVEAL ON SCROLL ===== */
-
 .hidden {
     opacity: 0;
     transform: translateY(40px);
@@ -67,7 +52,6 @@ body {
     transform: translateY(0);
 }
 
-/* ===== HERO ===== */
 
 .hero {
     min-height: auto;
@@ -99,7 +83,6 @@ body {
     box-shadow: 0 0 30px rgba(0,255,102,0.35);
 }
 
-/* ===== CD WIDGET ===== */
 
 .vinyl-widget {
     display: flex;
@@ -146,7 +129,6 @@ body {
     filter: drop-shadow(0 0 14px rgba(0,0,0,0.9));
 }
 
-/* ===== MUSIC TEXT ===== */
 
 .music-text {
     display: flex;
@@ -166,8 +148,6 @@ body {
     color: #ffffff;
 }
 
-/* ===== TEXT ===== */
-
 .hero-title {
     font-family: 'UnifrakturCook', serif;
     font-size: 80px;
@@ -184,7 +164,6 @@ body {
     max-width: 420px;
 }
 
-/* ===== SECTIONS ===== */
 
 .section-box {
     position: relative;
@@ -206,8 +185,6 @@ body {
     text-decoration: none;
 }
 
-/* ===== SCROLL SIGIL ===== */
-
 #scroll-sigil {
     position: fixed;
     left: 50%;
@@ -223,7 +200,6 @@ body {
     z-index: 9999;
 }
 
-/* ===== ANIMATIONS ===== */
 
 @keyframes spin {
     from { transform: rotate(0deg); }
@@ -235,7 +211,6 @@ body {
     50% { opacity: 1; }
 }
 
-/* ===== MOBILE ===== */
 
 @media (max-width: 900px) {
     .hero-content {
@@ -270,6 +245,7 @@ body {
         left: 60px;
     }
 }
+
 
 
 
